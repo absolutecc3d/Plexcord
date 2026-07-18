@@ -17,7 +17,7 @@ Custom plugins require a source build of Vencord. Before installing Plexcord, in
 You can install pnpm through npm:
 
 ```powershell
-npm install -g pnpm
+npm.cmd install -g pnpm
 ```
 
 You can confirm that everything is installed by running:
@@ -25,7 +25,7 @@ You can confirm that everything is installed by running:
 ```powershell
 git -v
 node -v
-pnpm -v
+pnpm.cmd -v
 ```
 
 ## Installation
@@ -42,7 +42,7 @@ cd Vencord
 ### 2. Install Vencord's dependencies
 
 ```powershell
-pnpm install --frozen-lockfile
+pnpm.cmd install --frozen-lockfile
 ```
 
 ### 3. Install Plexcord
@@ -56,7 +56,7 @@ New-Item -ItemType Directory -Force -Path "src/userplugins" | Out-Null
 Clone Plexcord into it:
 
 ```powershell
-git clone https://github.com/absolutecc3d/Plexcord.git src/userplugins/Plexcord
+git clone https://github.com/YOUR_USERNAME/Plexcord.git src/userplugins/Plexcord
 ```
 
 The final structure must look like this:
@@ -76,13 +76,13 @@ Do not leave the plugin inside an additional nested folder.
 From the main `Vencord` folder, run:
 
 ```powershell
-pnpm build
+pnpm.cmd build
 ```
 
 ### 5. Install the custom Vencord build
 
 ```powershell
-pnpm inject
+pnpm.cmd inject
 ```
 
 The Vencord Installer will open. Select your Discord installation and patch it.
@@ -106,7 +106,7 @@ Open PowerShell in your Vencord folder and run:
 cd src/userplugins/Plexcord
 git pull
 cd ../../..
-pnpm build
+pnpm.cmd build
 ```
 
 Restart Discord after the build finishes.
@@ -114,7 +114,7 @@ Restart Discord after the build finishes.
 If Plexcord stops appearing after a Discord update, run:
 
 ```powershell
-pnpm inject
+pnpm.cmd inject
 ```
 
 ## Updating Vencord
@@ -123,8 +123,8 @@ From the main Vencord folder:
 
 ```powershell
 git pull
-pnpm install --frozen-lockfile
-pnpm build
+pnpm.cmd install --frozen-lockfile
+pnpm.cmd build
 ```
 
 Then restart Discord.
@@ -135,7 +135,7 @@ Delete the Plexcord folder:
 
 ```powershell
 Remove-Item -Recurse -Force "src/userplugins/Plexcord"
-pnpm build
+pnpm.cmd build
 ```
 
 Restart Discord afterward.
@@ -153,7 +153,7 @@ Vencord/src/userplugins/Plexcord/index.ts
 Then rebuild Vencord:
 
 ```powershell
-pnpm build
+pnpm.cmd build
 ```
 
 ### The build reports missing packages
@@ -161,8 +161,8 @@ pnpm build
 Run:
 
 ```powershell
-pnpm install --frozen-lockfile
-pnpm build
+pnpm.cmd install --frozen-lockfile
+pnpm.cmd build
 ```
 
 ### Discord no longer loads Vencord
@@ -170,7 +170,7 @@ pnpm build
 Run:
 
 ```powershell
-pnpm inject
+pnpm.cmd inject
 ```
 
 Then patch the correct Discord installation again.
