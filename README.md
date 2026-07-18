@@ -68,7 +68,7 @@ Vencord/
         └── Plexcord/
             └── index.ts
 ```
-
+You may also see some other files like README.md, index.html and others
 Do not leave the plugin inside an additional nested folder.
 
 ### 4. Build Vencord
