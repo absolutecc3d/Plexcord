@@ -56,7 +56,7 @@ New-Item -ItemType Directory -Force -Path "src/userplugins" | Out-Null
 Clone Plexcord into it:
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/Plexcord.git src/userplugins/Plexcord
+git clone https://github.com/absolutecc3d/Plexcord.git src/userplugins/Plexcord
 ```
 
 The final structure must look like this:
