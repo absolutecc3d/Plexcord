@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plexcord is a Vencord plugin for client-side profile customisation.">
+  <meta name="theme-color" content="#0b0c0e">
+  <title>Plexcord - Client-side profile customisation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Plexcord home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span>Plexcord</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="button button-small button-quiet repo-link"
+         href="https://github.com/absolutecc3d/Plexcord"
+         target="_blank"
+         rel="noreferrer">
+        Source
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Vencord user plugin</p>
+          <h1>Your profile.<br>Your client.</h1>
+          <p class="hero-text">
+            Plexcord lets you display a custom username and custom badges inside Discord.
+            Every change stays on your client.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#install">Install Plexcord</a>
+            <a class="text-link repo-link"
+               href="https://github.com/absolutecc3d/Plexcord"
+               target="_blank"
+               rel="noreferrer">
+              View source <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <dl class="hero-meta">
+            <div>
+              <dt>Scope</dt>
+              <dd>Client-side</dd>
+            </div>
+            <div>
+              <dt>Entry file</dt>
+              <dd>index.ts</dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>Vencord</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="profile-demo" aria-label="Example Plexcord profile preview">
+          <div class="profile-cover">
+            <div class="constellation constellation-one"></div>
+            <div class="constellation constellation-two"></div>
+            <div class="shooting-star"></div>
+          </div>
+
+          <div class="avatar-wrap">
+            <div class="avatar">P</div>
+            <span class="status-dot" title="Online"></span>
+          </div>
+
+          <div class="profile-body">
+            <div class="profile-name-row">
+              <div>
+                <p class="display-name">Plexcord</p>
+                <p class="handle">@anything-you-like</p>
+              </div>
+              <span class="local-label">LOCAL</span>
+            </div>
+
+            <div class="badge-row" aria-label="Example custom badges">
+              <span class="badge badge-crown" title="Custom badge">◆</span>
+              <span class="badge badge-shield" title="Custom badge">⬟</span>
+              <span class="badge badge-loop" title="Custom badge">∞</span>
+              <span class="badge badge-ring" title="Custom badge">✦</span>
+            </div>
+
+            <div class="profile-note">
+              <span class="note-icon" aria-hidden="true">i</span>
+              <p>Visible only where Plexcord is running.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Plexcord capabilities">
+      <div class="shell marquee-inner">
+        <span>Custom username</span>
+        <span aria-hidden="true">/</span>
+        <span>Custom badges</span>
+        <span aria-hidden="true">/</span>
+        <span>Client-side only</span>
+        <span aria-hidden="true">/</span>
+        <span>No account changes</span>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">What it does</p>
+          <h2>Small plugin.<br>Clear purpose.</h2>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature-row">
+            <p class="feature-number">01</p>
+            <div>
+              <h3>Use a custom display identity</h3>
+              <p>
+                Replace the username shown in your client without changing your actual Discord account.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <p class="feature-number">02</p>
+            <div>
+              <h3>Add badges that fit your profile</h3>
+              <p>
+                Display your own badge set alongside your profile information.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <p class="feature-number">03</p>
+            <div>
+              <h3>Keep the effect local</h3>
+              <p>
+                Plexcord changes presentation inside the client. It does not grant official badges or alter Discord records.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-install" id="install">
+      <div class="shell install-grid">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">Installation</p>
+          <h2>Build it into Vencord.</h2>
+          <p class="section-intro">
+            Custom plugins are placed in Vencord's userplugins directory and included when Vencord is built.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-heading">
+              <span>1</span>
+              <h3>Clone Vencord</h3>
+            </div>
+            <div class="code-block">
+              <button class="copy-button" type="button" data-copy="git clone https://github.com/Vendicated/Vencord.git&#10;cd Vencord">Copy</button>
+              <pre><code>git clone https://github.com/Vendicated/Vencord.git
+cd Vencord</code></pre>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-heading">
+              <span>2</span>
+              <h3>Install dependencies</h3>
+            </div>
+            <div class="code-block">
+              <button class="copy-button" type="button" data-copy="pnpm.cmd install --frozen-lockfile">Copy</button>
+              <pre><code>pnpm.cmd install --frozen-lockfile</code></pre>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-heading">
+              <span>3</span>
+              <h3>Add Plexcord</h3>
+            </div>
+            <div class="code-block">
+              <button class="copy-button" type="button" data-copy="New-Item -ItemType Directory -Force -Path &quot;src/userplugins&quot; | Out-Null&#10;git clone https://github.com/absolutecc3d/Plexcord.git src/userplugins/Plexcord">Copy</button>
+              <pre><code>New-Item -ItemType Directory -Force -Path "src/userplugins" | Out-Null
+git clone https://github.com/absolutecc3d/Plexcord.git src/userplugins/Plexcord</code></pre>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-heading">
+              <span>4</span>
+              <h3>Build and inject</h3>
+            </div>
+            <div class="code-block">
+              <button class="copy-button" type="button" data-copy="pnpm.cmd build&#10;pnpm.cmd inject">Copy</button>
+              <pre><code>pnpm.cmd build
+pnpm.cmd inject</code></pre>
+            </div>
+          </article>
+
+          <article class="step step-final">
+            <div class="step-heading">
+              <span>5</span>
+              <h3>Enable the plugin</h3>
+            </div>
+            <p>
+              Restart Discord, open <strong>Settings → Vencord → Plugins</strong>,
+              search for <strong>Plexcord</strong>, and enable it.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-plain">
+      <div class="shell principle-grid">
+        <div>
+          <p class="eyebrow">No pretending</p>
+          <h2>Plexcord changes the view, not the account.</h2>
+        </div>
+        <div class="principle-copy">
+          <p>
+            A custom username is not a real username change. A custom badge is not an official Discord badge.
+            Plexcord is a presentation layer for people who want more control over how their client looks.
+          </p>
+          <p>
+            Keep that distinction clear when sharing screenshots or distributing the plugin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="shell faq-grid">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Things worth knowing.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Will other Discord users see my changes?</summary>
+            <p>
+              Not by default. The changes are rendered locally by Plexcord.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does Plexcord change my real Discord username?</summary>
+            <p>
+              No. It only changes the username displayed by the client.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does Plexcord grant official badges?</summary>
+            <p>
+              No. Custom badges are visual additions and do not exist on your Discord account.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why does installation require a Vencord source build?</summary>
+            <p>
+              Plexcord is a custom user plugin, so it must be included in the Vencord source tree before Vencord is built.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="shell cta-inner">
+        <div>
+          <p class="eyebrow">Plexcord</p>
+          <h2>Make Discord look like yours.</h2>
+        </div>
+        <a class="button button-primary repo-link"
+           href="https://github.com/absolutecc3d/Plexcord"
+           target="_blank"
+           rel="noreferrer">
+          Get the plugin
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Plexcord is an unofficial third-party Vencord plugin.</p>
+      <p>Not affiliated with Discord or Vencord.</p>
+    </div>
+  </footer>
+</body>
+</html>
