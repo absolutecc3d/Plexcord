@@ -188,7 +188,7 @@ const badges = [
 export default definePlugin({
     name: "Plexcord",
     description: "Locally override your username, display name, and add up to 5 custom badges. Client-side only, nobody else sees it.",
-    authors: [{ name: "dcyxn", id: 1368272513070534807 }],
+    authors: [{ name: "dcyxn", id: 1368272513070534807n }],
     dependencies: ["BadgesAPI"],
     settings,
 
